@@ -6,7 +6,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.model_selection import train_test_split
 from sklearn.feature_selection import SelectKBest, chi2
 import streamlit as st
-from sklearn.ensemble import RandomForestClassifier  # Ganti impor model
+from sklearn.ensemble import RandomForestClassifier 
 
 df = pd.read_csv('dataset.csv', encoding='latin1')
 df = df.sample(frac=1)
@@ -21,7 +21,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.15)  # Spl
 # Creating Pipeline
 pipeline = Pipeline([('vect', vectorizer),
                      ('chi', SelectKBest(chi2, k=13)),
-                     ('clf', RandomForestClassifier(random_state=0))]  # Ganti model
+                     ('clf', RandomForestClassifier(random_state=0))]  
                    )
 
 model = pipeline.fit(X_train, y_train)
