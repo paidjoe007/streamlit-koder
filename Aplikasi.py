@@ -42,4 +42,4 @@ def predict_kode(txt):
 st.title("Automatic ICD Menggunakan Machine Learning")
 diagnosis = st.text_area('Input Diagnosis Penyakit')
 if st.button('Automatic Coding'):
-    st.write("Kategori Kode ICD = ", predict_kode(diagnosis))
+    st.write("Kode ICD = ", predict_kode(diagnosis))
