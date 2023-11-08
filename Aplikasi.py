@@ -27,11 +27,6 @@ pipeline = Pipeline([('vect', vectorizer),
 
 model = pipeline.fit(X_train, y_train)
 
-# file = open('news.txt','r')
-# news = file.read()
-# file.close()
-
-# news = input("Enter news = ")
 def predict_kode(txt):
     diagnosis_data = {'predict_kode':[txt]}
     diagnosis_data_df = pd.DataFrame(diagnosis_data)
