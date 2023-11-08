@@ -39,5 +39,5 @@ diagnosis = st.text_area('Input Diagnosis Penyakit')
 if st.button('Automatic Coding'):
     st.write("Kode ICD = ", predict_kode(diagnosis))
     accuracy = model.score(X_test, y_test)
-    st.write("Akurasi Model: {:.2f}%".format(accuracy * 100))
+    st.write("Akurasi: {:.2f}%".format(accuracy * 100))
 
