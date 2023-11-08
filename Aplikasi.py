@@ -8,8 +8,6 @@ from sklearn.feature_selection import SelectKBest, chi2
 import streamlit as st
 from sklearn.ensemble import RandomForestClassifier
 
-# Menampilkan gambar
-image = st.image('icd_image.png', use_column_width=True, caption='Gambar ICD')
 
 df = pd.read_csv('dataset.csv', encoding='latin1')
 df = df.sample(frac=1)
