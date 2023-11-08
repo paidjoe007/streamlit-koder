@@ -37,6 +37,6 @@ def predict_kode(txt):
 st.title("Automatic ICD Menggunakan Machine Learning")
 diagnosis = st.text_area('Input Diagnosis Penyakit')
 if st.button('Automatic Coding'):
-  accuracy = model.score(X_test, y_test)
+  accuracy = model.score(X_train, y_train)
 st.write("Akurasi Model: {:.2f}%".format(accuracy * 100))
     st.write("Kode ICD = ", predict_kode(diagnosis))
