@@ -27,8 +27,6 @@ pipeline = Pipeline([('vect', vectorizer),
 
 model = pipeline.fit(X_train, y_train)
 
-
-
 def predict_kode(txt):
     diagnosis_data = {'predict_kode':[txt]}
     diagnosis_data_df = pd.DataFrame(diagnosis_data)
@@ -39,4 +37,4 @@ def predict_kode(txt):
 st.title("Automatic ICD Menggunakan Machine Learning")
 diagnosis = st.text_area('Input Diagnosis Penyakit')
 if st.button('Automatic Coding'):
-st.write("Kode ICD = ", predict_kode(diagnosis))
+    st.write("Kode ICD = ", predict_kode(diagnosis))
