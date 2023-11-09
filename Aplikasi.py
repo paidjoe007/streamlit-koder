@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from PIL import Image
 import re, string
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import Pipeline
