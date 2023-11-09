@@ -33,9 +33,14 @@ def predict_kode(txt):
     predict_diagnosis_cat = model.predict(diagnosis_data_df['predict_kode'])[0]
     return predict_diagnosis_cat
 
-logo = Image.open("logo.png")
-small_logo = logo.resize((100, 100))
-st.image(small_logo , use_column_width=True)
+logo1 = Image.open("logo1.png")
+small_logo1 = logo1.resize((50, 50))
+
+logo2 = Image.open("logo2.png")  
+small_logo2 = logo2.resize((50, 50)) 
+
+# Menampilkan gambar sejajar
+st.image([small_logo1, small_logo2], use_column_width=True)
 
 st.title("Automatic ICD Menggunakan Machine Learning")
 diagnosis = st.text_area('Input Diagnosis Penyakit')
