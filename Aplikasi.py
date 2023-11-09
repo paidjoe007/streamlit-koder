@@ -34,7 +34,8 @@ def predict_kode(txt):
     return predict_diagnosis_cat
 
 logo = Image.open("logo.png")
-st.image(logo, use_column_width=True)
+small_logo = logo.resize((100, 100))
+st.image(small_logo , use_column_width=True)
 
 st.title("Automatic ICD Menggunakan Machine Learning")
 diagnosis = st.text_area('Input Diagnosis Penyakit')
