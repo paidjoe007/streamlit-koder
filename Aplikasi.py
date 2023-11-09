@@ -41,9 +41,7 @@ small_logo2 = logo2.resize((100, 100))
 
 st.image([small_logo1, small_logo2], use_column_width=False)
 
-st.title("Automatic ICD Menggunakan Machine Learning")
+st.title("Automatic ICD Menggunakan Machine Learning pada Diagnosis Penyakit Diabetes Melitus")
 diagnosis = st.text_area('Input Diagnosis Penyakit')
 if st.button('Automatic Coding'):
     st.write("Kode ICD = ", predict_kode(diagnosis))
-    accuracy = model.score(X_test, y_test)
-    st.write("Akurasi: {:.2f}%".format(accuracy * 100))
