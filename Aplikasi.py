@@ -40,7 +40,7 @@ logo2 = Image.open("logo2.png")
 small_logo2 = logo2.resize((50, 50)) 
 
 # Menampilkan gambar sejajar
-st.image([small_logo1, small_logo2], use_column_width=True)
+st.image([small_logo1, small_logo2], use_column_width=False)
 
 st.title("Automatic ICD Menggunakan Machine Learning")
 diagnosis = st.text_area('Input Diagnosis Penyakit')
